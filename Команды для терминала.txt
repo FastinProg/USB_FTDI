@@ -1,0 +1,13 @@
+Режимы работы:
+None
+&7&0&01&0&0&0&0&1
+ADS_Init
+&7&0&01&0&0&0&0&2
+ConfigPin for normal electrode
+&7&0&01&0&0&0&0&3
+ReadData
+&7&0&01&0&0&0&0&4
+ConfigPin for disable electrode
+&7&0&01&0&0&0&0&5
+ConfigPin for test signal
+&7&0&01&0&0&0&0&6

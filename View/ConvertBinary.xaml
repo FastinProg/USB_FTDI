@@ -1,0 +1,57 @@
+﻿<UserControl x:Class="SDReaderBinaryConvector.ConvertBinary"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SDReaderBinaryConvector"
+              >
+
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition  Width="100"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Margin="10"  Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Fill="MediumAquamarine" RadiusX="15" RadiusY="15" />
+        <Rectangle Margin="10"  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Fill="MediumAquamarine" RadiusX="15" RadiusY="15"  />
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan ="2"  Background="#FFEEF4FF"  >
+            <Button x:Name="ChoiseFile" Margin="10" Content="Выбрать файл" VerticalAlignment="Center" Height="30" Click="ChoiseFile_Click"   />
+        </StackPanel>
+        <DockPanel Margin="15" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" >
+            <Label DockPanel.Dock="Top" x:Name="LabelTitleInputFile" HorizontalContentAlignment="Center"  Content="Входной файл" Background="White" Width="511" Height="28"/>
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" Text="Название входного файла"/>
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" Text="Размер входного файла"/>
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" Text="Расположение входного файла"/>
+        </DockPanel> 
+        <DockPanel Margin="15" Grid.Row="0" Grid.Column="2" >
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" />
+            <TextBox Text="{Binding InputFileName,Mode=OneWay}" IsReadOnly="True" Margin="0,15,0,0" DockPanel.Dock="Top"  />
+            <TextBox Text="{Binding InputFileSize,Mode=OneWay}" IsReadOnly="True" Margin="0,15,0,0" DockPanel.Dock="Top" />
+            <TextBox Text="{Binding InputFilePath,Mode=OneWay}" IsReadOnly="True" Margin="0,15,0,0" DockPanel.Dock="Top" />
+        </DockPanel>
+        
+        <DockPanel Margin="15" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" >
+            <Label DockPanel.Dock="Top"  HorizontalContentAlignment="Center"  Content="Выходной файл" Background="White" Width="511" Height="28"/>
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" Text="Название выходного файла"/>
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" Text="Размер выходного файла"/>
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" Text="Расположение выходного файла"/>
+        </DockPanel>
+        <DockPanel Margin="15" Grid.Row="1" Grid.Column="2" >
+            <TextBlock Margin="0,15,0,0" DockPanel.Dock="Top" />
+            <TextBox Text="{Binding OutputFileName,Mode=OneWay}" IsReadOnly="True" Margin="0,15,0,0" DockPanel.Dock="Top" />
+            <TextBox Text="{Binding OutputFileSize,Mode=OneWay}" IsReadOnly="True" Margin="0,15,0,0" DockPanel.Dock="Top" />
+            <TextBox Text="{Binding OutputFilePath,Mode=OneWay}" IsReadOnly="True" Margin="0,15,0,0" DockPanel.Dock="Top"/>
+        </DockPanel>
+
+    </Grid>
+
+</UserControl>
