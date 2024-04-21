@@ -69,8 +69,10 @@ namespace USB_FTDI.View
             
             for (int i = 0; i < chaneelQuantity; i++)
             {
-                MyPlot1.Plot.Add.Signal(input_data[i]);
+                MyPlot1.Plot.Add.Signal(input_data[i], period:2);
 
+                MyPlot1.Plot.Axes.Bottom.TickLabelStyle.FontSize = 14;
+              
                 MyPlot1.Plot.Axes.SetLimits(0, double.NaN, double.NaN, double.NaN);
                 /* Add horizontal line */
                 var hl2 = MyPlot1.Plot.Add.HorizontalLine(0);
