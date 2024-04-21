@@ -22,9 +22,9 @@
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0" Background="Black"/>
-        <StackPanel Grid.Column="0" Grid.Row="1" Background="Black"/>
-        <StackPanel Grid.Column="1" Grid.Row="0" Background="Green"/>
+        <StackPanel Grid.Column="0" Grid.Row="0"/>
+        <StackPanel Grid.Column="0" Grid.Row="1"/>
+        <StackPanel Grid.Column="1" Grid.Row="0"/>
         <StackPanel x:Name="Parents" Grid.Column="2" Grid.Row="1">
             <ScottPlot:WpfPlot x:Name="MyPlot1" Height="{Binding ElementName=Parents, Path=ActualHeight}" Width="{Binding ElementName=Parents, Path=ActualWidth}"/>
         </StackPanel>
@@ -35,7 +35,7 @@
             </StackPanel>
         </Grid>-->
 
-        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="3" >
+        <StackPanel Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" >
             <StackPanel.Background>
                 <SolidColorBrush Color="MintCream"/>
             </StackPanel.Background>
