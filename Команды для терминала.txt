@@ -11,3 +11,5 @@ ConfigPin for disable electrode
 &7&0&01&0&0&0&0&5
 ConfigPin for test signal
 &7&0&01&0&0&0&0&6
+Stop
+&7&0&01&0&0&0&0&8

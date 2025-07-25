@@ -23,7 +23,7 @@
                     <Border Margin="10,0,0,0" Background="AliceBlue" >
                         <StackPanel Width="100" >
                             <Button x:Name="btConnect" Margin="10,10,10,0" Content="Connect" Click="btConnect_Click"/>
-                            <Button Margin="10,10,10,0" Content="ReScan" Click="Button_Click"/>
+                            <Button Margin="10,10,10,0" Content="ReScan"/>
                         </StackPanel>
                     </Border>
                     <!--COM Number-->
@@ -54,7 +54,7 @@
                 </Border>
                 <!--"Container Receive messenge"-->
                 <StackPanel Margin="0,10,0,0" Background="White" Orientation="Horizontal">
-                    <Border Margin="1" Width="450" Height="150" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left">
+                    <Border Margin="1" Width="450" Height="125" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Left">
                         <ScrollViewer VerticalScrollBarVisibility="Auto">
                             <TextBlock x:Name="tbRecieve" Margin="5" TextWrapping="Wrap" >
                             </TextBlock>
@@ -75,12 +75,12 @@
                     <Button x:Name="btSendTx" Margin="35,0,0,0" Width="90" Height="35" Content="Send" Click="btSendTx_Click"/>
                 </StackPanel>
                 <!--Статус подключения-->
-                <StackPanel Height="30">
-                    <Border Background="#9cd4d7" CornerRadius="10" Height="30" >
+                <StackPanel>
+                    <Border Background="#9cd4d7" CornerRadius="10" Height="45" >
                         <StackPanel Margin="0,0,0,0" Orientation="Horizontal" Height="35" VerticalAlignment="Center">
                             <TextBlock  Text="Статус подключения:" TextAlignment="Center" HorizontalAlignment="Right" VerticalAlignment="Center" TextWrapping="Wrap"/>
-
-                            <TextBlock x:Name="tblConnectStatus" Text="{Binding Path = Data}" Foreground="{Binding Path = Color}" VerticalAlignment="Center" />
+                            <TextBlock x:Name="tblConnectStatus" Text="{Binding Path = Data}" Foreground="{Binding Path = Color}" VerticalAlignment="Center" Width="372"/>
+                            <Button Content="Back" Width="90" Click="Button_Click_1" />
                         </StackPanel>
                     </Border>
                 </StackPanel>

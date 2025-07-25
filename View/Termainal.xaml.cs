@@ -133,7 +133,8 @@ namespace USB_FTDI.View
                                 if ((value & 0x800000) != 0)
                                     value |= (0xff << 24);
 
-                                double rez = (double)(value * (0.000000286));
+                                //double rez = (double)(value * (0.000000286));
+                                double rez = (double)(value * (0.000393));
                                 //double rez = (2.4 / value) + (2^23);
 
                                 if (msg.subindex == 0)
@@ -263,9 +264,10 @@ namespace USB_FTDI.View
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            // FTDI.CloseFile();
+            stremWriter.Close();
+            fileStream.Close();
         }
     }
 }
