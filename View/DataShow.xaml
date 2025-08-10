@@ -21,13 +21,17 @@
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="120"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Grid.Row="0"/>
         <StackPanel Grid.Column="0" Grid.Row="1"/>
         <StackPanel Grid.Column="1" Grid.Row="0"/>
-        <StackPanel x:Name="Parents" Grid.Column="2" Grid.Row="1">
-            <ScottPlot:WpfPlot x:Name="MyPlot1" Height="{Binding ElementName=Parents, Path=ActualHeight}" Width="{Binding ElementName=Parents, Path=ActualWidth}"/>
-        </StackPanel>
+        <UniformGrid x:Name="Parents" Columns="4" Grid.Column="2" Grid.Row="1" >
+            <ScottPlot:WpfPlot x:Name="MyPlot1"  Background="Yellow"/>
+            <ScottPlot:WpfPlot x:Name="MyPlot2" />
+            <ScottPlot:WpfPlot x:Name="MyPlot3" />
+            <ScottPlot:WpfPlot x:Name="MyPlot4" />
+        </UniformGrid>
 
         <!--<Grid Grid.Column="3" Grid.Row="1">
             <StackPanel Orientation="Vertical">
