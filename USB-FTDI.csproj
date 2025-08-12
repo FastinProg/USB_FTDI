@@ -157,9 +157,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ScottPlot">
-      <Version>5.0.26</Version>
+      <Version>5.0.55</Version>
     </PackageReference>
-    <PackageReference Include="ScottPlot.WPF" Version="5.0.26" />
+    <PackageReference Include="ScottPlot.WPF" Version="5.0.55" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

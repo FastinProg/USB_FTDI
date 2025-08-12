@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Work\\Code\\USB_FTDI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,12 +23,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DataShow.xaml.cs",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\View\\DataShow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\DataShow.xaml.cs",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\View\\DataShow.xaml.cs",
+              "RelativeToolTip": "View\\DataShow.xaml.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAYwHsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T17:17:50.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Termainal.xaml.cs",
               "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\View\\Termainal.xaml.cs",
               "RelativeDocumentMoniker": "View\\Termainal.xaml.cs",
               "ToolTip": "C:\\Work\\Code\\USB_FTDI\\View\\Termainal.xaml.cs",
               "RelativeToolTip": "View\\Termainal.xaml.cs",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAAAHYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-25T09:34:43.84Z",
               "EditorCaption": ""

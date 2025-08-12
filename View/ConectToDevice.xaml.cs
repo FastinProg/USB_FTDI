@@ -1,7 +1,6 @@
 ﻿//#define PLOT
 
 using FTDI;
-using ScottPlot.Plottable;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
