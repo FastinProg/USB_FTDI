@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\Work\\Code\\USB_FTDI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\datashow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\datashow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\termainal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\termainal.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,11 +42,89 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DataShow.xaml",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\View\\DataShow.xaml",
+              "RelativeDocumentMoniker": "View\\DataShow.xaml",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\View\\DataShow.xaml",
+              "RelativeToolTip": "View\\DataShow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-01T02:39:53.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Termainal.xaml",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\View\\Termainal.xaml",
+              "RelativeDocumentMoniker": "View\\Termainal.xaml",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\View\\Termainal.xaml",
+              "RelativeToolTip": "View\\Termainal.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-01T02:39:50.737Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-01T02:39:18.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAvwCIAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T02:39:17.622Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\App.xaml.cs",
+              "RelativeDocumentMoniker": "App.xaml.cs",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\App.xaml.cs",
+              "RelativeToolTip": "App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-01T02:39:12.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-09-01T02:39:10.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DataShow.xaml.cs",
               "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\View\\DataShow.xaml.cs",
               "RelativeDocumentMoniker": "View\\DataShow.xaml.cs",
@@ -35,7 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Termainal.xaml.cs",
               "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\View\\Termainal.xaml.cs",
               "RelativeDocumentMoniker": "View\\Termainal.xaml.cs",
