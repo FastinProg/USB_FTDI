@@ -1,17 +1,14 @@
 ﻿<Window
-    x:Class="USB_FTDI.MainWindow"
+    x:Class="USB_FTDI.View.WindowTwin"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:USB_FTDI"
+    xmlns:local="clr-namespace:USB_FTDI.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    x:Name="UserWindow"
-    Title="USBFTDI"
-    MinWidth="800"
-    MinHeight="600"
-    WindowState="Maximized"
+    Title="WindowTwin"
+    Width="800"
+    Height="450"
     mc:Ignorable="d">
-
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Background" Value="#4A90E2" />
@@ -54,7 +51,7 @@
     </Window.Resources>
 
     <!--  Корневой Grid растягивается на весь экран  -->
-    <Grid x:Name="MainGrid" Cursor="">
+    <Grid x:Name="MainGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="300" />
             <RowDefinition Height="*" />
@@ -75,89 +72,96 @@
             Width="150"
             Background="#FFEEF4FF"
             Orientation="Vertical">
-            <Button
-                x:Name="ButtonMain"
-                Click="ButtonChoiseForm_Click"
-                Content="Меню" />
-            <Button x:Name="ButtonNewTwin" Click="ButtonChoiseForm_Click">
+            <Button x:Name="ButtonMain" Content="Меню" />
+            <Button x:Name="ButtonNewTwin">
                 <TextBlock
                     Text="Создание нового двойника"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
-            <Button x:Name="ButtonDonload" Click="ButtonChoiseForm_Click">
+            <Button x:Name="ButtonDonload">
                 <TextBlock
                     Text="Загрузить двойника"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
-            <Button x:Name="ButtonSee" Click="ButtonChoiseForm_Click">
+            <Button x:Name="ButtonSee">
                 <TextBlock
                     Text="Просмотр двойника"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
-            <Button
-                x:Name="ButtonTermianl"
-                Click="ButtonChoiseForm_Click"
-                Visibility="Hidden">
+            <Button x:Name="ButtonTermianl" Visibility="Hidden">
                 <TextBlock
                     Text="Терминал"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
-            <Button
-                x:Name="ButtonParsing"
-                Click="ButtonChoiseForm_Click"
-                Cursor="Hand"
-                Visibility="Visible">
+            <Button x:Name="ButtonParsing" Visibility="Hidden">
                 <TextBlock
                     Text="Визуализация"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
         </StackPanel>
+        <!--  Правое меню  -->
+        <Grid Grid.Column="1" Grid.RowSpan="3" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
 
-        <!--  Центральная карточка пациента  -->
-        <Border
-            Grid.Row="0"
-            Grid.RowSpan="3"
-            Grid.Column="1"
-            Margin="50,0,0,50"
-            Padding="20"
-            Background="White"
-            BorderBrush="#CCCCCC"
-            BorderThickness="1"
-            CornerRadius="10">
-            <StackPanel>
-                <TextBlock
-                    Margin="0,0,0,10"
-                    FontSize="18"
-                    FontWeight="Bold"
-                    Text="Цифровой двойник сердца" />
-                <TextBlock
-                    Margin="0,0,0,15"
-                    FontSize="14"
-                    Text="Карточка пациента (по умолчанию)" />
-                <TextBlock
-                    Margin="0,0,0,5"
-                    FontSize="16"
-                    FontWeight="SemiBold"
-                    Text="Бодин Андрей Юрьевич" />
-                <TextBlock>
-                    <Run Text="Возраст: " />
-                    <Run Text="27" />
-                </TextBlock>
-                <TextBlock>
-                    <Run Text="Пол: " />
-                    <Run Text="Мужской" />
-                </TextBlock>
-                <TextBlock>
-                    <Run Text="Дата создания: " />
-                    <Run Text="01.09.2025" />
-                </TextBlock>
+
+            <!--  Заголовок  -->
+            <TextBlock
+                Grid.Row="0"
+                FontSize="20"
+                FontWeight="Bold"
+                Text="Цифровой двойник сердца" />
+
+            <!--  Имя пациента  -->
+            <StackPanel Grid.Row="2">
+                <TextBlock Margin="0,0,0,5" FontSize="16" Text="ФИО пациента" />
+                <TextBox x:Name="TextBoxName" FontSize="14" Height="30" />
             </StackPanel>
-        </Border>
 
+            <!--  Возраст  -->
+            <StackPanel Grid.Row="4">
+                <TextBlock Margin="0,0,0,5" FontSize="16" Text="Возраст" />
+                <StackPanel Orientation="Horizontal">
+                    <TextBox
+                        x:Name="TextBoxAge"
+                        Width="50"
+                        Height="30"
+                        Text="30" />
+
+                </StackPanel>
+            </StackPanel>
+
+            <!--  Пол  -->
+            <StackPanel Grid.Row="6">
+                <TextBlock Margin="0,0,0,5" Text="Пол" FontSize="16" />
+                <ComboBox x:Name="ComboBoxGender" Height="30">
+                    <ComboBoxItem Content="Мужской" />
+                    <ComboBoxItem Content="Женский" />
+                </ComboBox>
+            </StackPanel>
+
+            <!--  Кнопка Создать  -->
+            <Button
+                Grid.Row="8"
+                Width="100"
+                Height="35"
+                HorizontalAlignment="Left"
+                Content="Создать" />
+
+        </Grid>
     </Grid>
 </Window>

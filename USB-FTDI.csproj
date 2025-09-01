@@ -96,8 +96,14 @@
     <Compile Include="View\DataShow.xaml.cs">
       <DependentUpon>DataShow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\NewTwin.xaml.cs">
+      <DependentUpon>NewTwin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Termainal.xaml.cs">
       <DependentUpon>Termainal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowTwin.xaml.cs">
+      <DependentUpon>WindowTwin.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -119,7 +125,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\NewTwin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Termainal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowTwin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

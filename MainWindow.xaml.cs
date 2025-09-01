@@ -46,6 +46,13 @@ namespace USB_FTDI
             Button bt = (Button)sender;
             switch (bt.Name)
             {
+                case "ButtonNewTwin":
+                    // Создаём новое окно
+                    WindowTwin window = new WindowTwin();
+
+                    // Показываем его в отдельном окне
+                    window.Show();
+                    return;
                 case "ButtonConvert":
                     ul = new ConvertBinary();
                     break;
