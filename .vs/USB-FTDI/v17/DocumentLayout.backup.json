@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Work\\Code\\USB_FTDI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -11,11 +11,11 @@
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\windowtwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\windowtwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\windowtwin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\windowtwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\windowtwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\windowtwin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -74,8 +74,7 @@
               "RelativeToolTip": "View\\WindowTwin.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T13:05:14.924Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T13:05:14.924Z"
             },
             {
               "$type": "Document",
@@ -86,8 +85,7 @@
               "ToolTip": "C:\\Work\\Code\\USB_FTDI\\View\\WindowTwin.xaml",
               "RelativeToolTip": "View\\WindowTwin.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-09-01T03:45:32.558Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T03:45:32.558Z"
             },
             {
               "$type": "Document",
@@ -139,8 +137,8 @@
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml*",
-              "RelativeToolTip": "MainWindow.xaml*",
+              "ToolTip": "C:\\Work\\Code\\USB_FTDI\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-09-01T02:39:18.271Z",
               "EditorCaption": ""
@@ -155,8 +153,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAACMAAAAAAAAAAIA0wDIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-01T02:39:17.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-01T02:39:17.622Z"
             },
             {
               "$type": "Document",
