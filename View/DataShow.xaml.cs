@@ -118,6 +118,7 @@ namespace USB_FTDI.View
 
                 plt.XLabel("Time, ms");
                 plt.Axes.Bottom.TickGenerator = tickGenX;
+                //plt.Axes.Bottom.TickGenerator = new ScottPlot.TickGenerators.NumericFixedInterval(200);   // крупные: 200 мс
                 plt.Axes.Left.TickGenerator = tickGenY;
                 plt.Axes.Left.TickLabelStyle.IsVisible = false;
 
@@ -125,6 +126,9 @@ namespace USB_FTDI.View
                 //plt.Grid(true);
 
                 // Настраиваем цвета и толщину линий сетки
+
+                
+
                 plt.Grid.MajorLineColor = ScottPlot.Color.FromARGB(MakeArgb(50, 204, 0, 0));
                 plt.Grid.MajorLineWidth = 2;
                 plt.Grid.MinorLineColor = ScottPlot.Color.FromARGB(MakeArgb(30, 255, 182, 182)); // Розовый — тонкие линии (minor)

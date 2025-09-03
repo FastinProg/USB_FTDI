@@ -84,6 +84,7 @@
     <Compile Include="FTDI_Logic\FTDI_Hardware.cs" />
     <Compile Include="FTDI_Logic\FTDI_Queue.cs" />
     <Compile Include="Global.cs" />
+    <Compile Include="Image\FileName.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -104,6 +105,9 @@
     </Compile>
     <Compile Include="View\WindowTwin.xaml.cs">
       <DependentUpon>WindowTwin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\WindowVisualization.xaml.cs">
+      <DependentUpon>WindowVisualization.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -134,6 +138,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\WindowTwin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\WindowVisualization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,6 +182,9 @@
       <Version>5.0.55</Version>
     </PackageReference>
     <PackageReference Include="ScottPlot.WPF" Version="5.0.55" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image\2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

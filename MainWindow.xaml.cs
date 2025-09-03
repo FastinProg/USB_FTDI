@@ -48,8 +48,8 @@ namespace USB_FTDI
             {
                 case "ButtonNewTwin":
                     // Создаём новое окно
-                    WindowTwin window = new WindowTwin();
-
+                    //WindowTwin window = new WindowTwin();
+                    WindowVisualization window = new WindowVisualization();
                     // Показываем его в отдельном окне
                     window.Show();
                     return;
