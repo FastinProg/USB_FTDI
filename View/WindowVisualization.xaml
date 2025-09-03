@@ -129,6 +129,7 @@
         </Border>
 
         <!-- Правая часть -->
+        <!-- Правая часть -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="48"/>
@@ -141,26 +142,37 @@
                 <DockPanel LastChildFill="False" Margin="12,0">
                     <StackPanel Orientation="Horizontal" DockPanel.Dock="Left" VerticalAlignment="Center">
                         <Ellipse Width="10" Height="10" Fill="#22C55E" Margin="0,0,8,0"/>
-                        <!--<TextBlock Text="Auto run" Margin="8,0,0,0" VerticalAlignment="Center"/>
-                        <ToggleButton x:Name="AutoRunToggle" Margin="6,0,0,0" Width="48" Height="24"/>
-                        <TextBlock Text="Auto scale" Margin="16,0,0,0" VerticalAlignment="Center"/>
-                        <ToggleButton x:Name="AutoScaleToggle" Margin="6,0,0,0" Width="48" Height="24"/>-->
                     </StackPanel>
-                    <!--<TextBlock DockPanel.Dock="Right" VerticalAlignment="Center" Opacity="0.6"
-                               Text="Демо-режим · 1 точка" />-->
                 </DockPanel>
             </Border>
 
-            <!-- Область графика -->
-            <Border Grid.Row="1" Margin="12" CornerRadius="8" Background="{StaticResource PlotBg}" BorderBrush="{StaticResource PanelBorder}" BorderThickness="1">
-                <Grid>
-                    <Canvas x:Name="GridCanvas"/>
-                    <Canvas x:Name="AxisCanvas" IsHitTestVisible="False"/>
-                    <Canvas x:Name="PlotCanvas" Background="Transparent">
-                        <Ellipse x:Name="PointEl" Width="10" Height="10" Fill="#F43F5E" Stroke="Black" StrokeThickness="1"/>
-                    </Canvas>
-                </Grid>
-            </Border>
+            <!-- Области графиков -->
+            <Grid Grid.Row="1" Margin="12">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <!-- верхний график (ЭКГ) -->
+                    <RowDefinition Height="2*"/>
+                    <!-- нижний график (визуализация) -->
+                </Grid.RowDefinitions>
+
+                <!-- Верхний график с осями -->
+                <Border Grid.Row="0" CornerRadius="8" Background="{StaticResource PlotBg}" BorderBrush="{StaticResource PanelBorder}" BorderThickness="1" Margin="0,0,0,8">
+                    <Grid>
+                        <Canvas x:Name="GridCanvas"/>
+                        <Canvas x:Name="AxisCanvas" IsHitTestVisible="False"/>
+                        <Canvas x:Name="PlotCanvas" Background="Transparent">
+                            <Ellipse x:Name="PointEl" Width="10" Height="10" Fill="#F43F5E" Stroke="Black" StrokeThickness="1"/>
+                        </Canvas>
+                    </Grid>
+                </Border>
+
+                <!-- Нижний график (пустой, под визуализацию) -->
+                <Border Grid.Row="1" CornerRadius="8" Background="#FAFAFA" BorderBrush="{StaticResource PanelBorder}" BorderThickness="1">
+                    <Grid>
+                        <Canvas x:Name="VisualizationCanvas" Background="Transparent"/>
+                    </Grid>
+                </Border>
+            </Grid>
 
             <!-- Нижняя панель -->
             <Border Grid.Row="2" Background="{StaticResource PanelBg}" BorderBrush="{StaticResource PanelBorder}" BorderThickness="0,1,0,0" Padding="12">
