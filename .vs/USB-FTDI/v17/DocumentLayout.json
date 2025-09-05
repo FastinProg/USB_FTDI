@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\datashow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|c:\\work\\code\\usb_ftdi\\view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|C:\\Work\\Code\\USB_FTDI\\view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4CBD487D-0365-4132-B9B0-5008EEEE9003}|USB-FTDI.csproj|solutionrelative:view\\termainal.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -18,8 +18,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
