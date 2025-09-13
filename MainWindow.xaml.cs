@@ -44,7 +44,11 @@ namespace USB_FTDI
         {
             UIElement ul = null;
             Button bt = (Button)sender;
-            
+            // Устанавливаем выбранную
+            if (sender is Button clickedButton)
+            {
+                clickedButton.Tag = "Selected";
+            }
             switch (bt.Name)
             {
                 case "ButtonNewTwin":

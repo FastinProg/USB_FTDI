@@ -13,7 +13,7 @@
     mc:Ignorable="d">
 
     <Window.Resources>
-        <Style TargetType="Button">
+        <Style TargetType="Button" x:Key="MenuButtonStyle">
             <Setter Property="Background" Value="#4A90E2" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontWeight" Value="Normal" />
@@ -29,20 +29,28 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
-                            x:Name="border"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="8">
+                    x:Name="border"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    CornerRadius="8">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                         <ControlTemplate.Triggers>
+                            <!-- Наведение -->
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#357ABD" />
                             </Trigger>
+                            <!-- Нажатие -->
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#2C5F9C" />
                             </Trigger>
+                            <!-- Кнопка выбрана -->
+                            <Trigger Property="Tag" Value="Selected">
+                                <Setter TargetName="border" Property="Background" Value="#f52bff" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                            </Trigger>
+                            <!-- Отключена -->
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="border" Property="Background" Value="Gray" />
                             </Trigger>
@@ -51,6 +59,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
     </Window.Resources>
     <Grid
         x:Name="MainStackPanel"
@@ -84,27 +93,30 @@
                     Grid.Column="0"
                     Width="150"
                     Background="#FFEEF4FF"
-                    Orientation="Vertical">
+                    Orientation="Vertical" Cursor="">
 
-                    <Button x:Name="ButtonNewTwin" Click="ButtonChoiseForm_Click">
+                    <Button x:Name="ButtonNewTwin" Click="ButtonChoiseForm_Click" Style="{StaticResource MenuButtonStyle}">
                         <TextBlock
-                            Text="Создание нового двойника"
+                            Text="Создание новго двойника"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Button>
-                    <Button x:Name="ButtonDonload" Click="ButtonChoiseForm_Click">
+
+
+                    <Button x:Name="ButtonDonload" Click="ButtonChoiseForm_Click" Style="{StaticResource MenuButtonStyle}">
                         <TextBlock
                             Text="Загрузить двойника"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Button>
-                    <Button x:Name="ButtonSee" Click="ButtonChoiseForm_Click">
+                    <Button x:Name="ButtonSee" Click="ButtonChoiseForm_Click" Style="{StaticResource MenuButtonStyle}">
                         <TextBlock
                             Text="Просмотр двойника"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Button>
                     <Button
+                        Style="{StaticResource MenuButtonStyle}"
                         x:Name="ButtonTermianl"
                         Click="ButtonChoiseForm_Click"
                         Visibility="Hidden">
@@ -114,6 +126,7 @@
                             TextWrapping="Wrap" />
                     </Button>
                     <Button
+                        Style="{StaticResource MenuButtonStyle}"
                         x:Name="ButtonParsing"
                         Click="ButtonChoiseForm_Click"
                         Cursor="Hand"
