@@ -44,14 +44,16 @@ namespace USB_FTDI
         {
             UIElement ul = null;
             Button bt = (Button)sender;
+            
             switch (bt.Name)
             {
                 case "ButtonNewTwin":
-                    // Создаём новое окно
-                    //WindowTwin window = new WindowTwin();
-                    WindowVisualization window = new WindowVisualization();
-                    // Показываем его в отдельном окне
-                    window.Show();
+                    var Twin = new WindowTwin();
+                    Twin.Show();
+                    return;
+                case "ButtonSee":
+                    var Visualization = new WindowVisualization();
+                    Visualization.Show();
                     return;
                 case "ButtonConvert":
                     ul = new ConvertBinary();

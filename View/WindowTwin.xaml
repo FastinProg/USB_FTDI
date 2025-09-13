@@ -72,14 +72,13 @@
             Width="150"
             Background="#FFEEF4FF"
             Orientation="Vertical">
-            <Button x:Name="ButtonMain" Content="Меню" />
             <Button x:Name="ButtonNewTwin">
                 <TextBlock
                     Text="Создание нового двойника"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
-            <Button x:Name="ButtonDonload">
+            <Button x:Name="ButtonDonload" Cursor="Hand">
                 <TextBlock
                     Text="Загрузить двойника"
                     TextAlignment="Center"
@@ -88,6 +87,12 @@
             <Button x:Name="ButtonSee">
                 <TextBlock
                     Text="Просмотр двойника"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" />
+            </Button>
+            <Button x:Name="Back">
+                <TextBlock
+                    Text="Назад"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
@@ -105,7 +110,10 @@
             </Button>
         </StackPanel>
         <!--  Правое меню  -->
-        <Grid Grid.Column="1" Grid.RowSpan="3" Margin="20">
+        <Grid
+            Grid.RowSpan="3"
+            Grid.Column="1"
+            Margin="20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="10" />
@@ -128,13 +136,22 @@
 
             <!--  Имя пациента  -->
             <StackPanel Grid.Row="2">
-                <TextBlock Margin="0,0,0,5" FontSize="16" Text="ФИО пациента" />
-                <TextBox x:Name="TextBoxName" FontSize="14" Height="30" />
+                <TextBlock
+                    Margin="0,0,0,5"
+                    FontSize="16"
+                    Text="ФИО пациента" />
+                <TextBox
+                    x:Name="TextBoxName"
+                    Height="30"
+                    FontSize="14" />
             </StackPanel>
 
             <!--  Возраст  -->
             <StackPanel Grid.Row="4">
-                <TextBlock Margin="0,0,0,5" FontSize="16" Text="Возраст" />
+                <TextBlock
+                    Margin="0,0,0,5"
+                    FontSize="16"
+                    Text="Возраст" />
                 <StackPanel Orientation="Horizontal">
                     <TextBox
                         x:Name="TextBoxAge"
@@ -147,7 +164,10 @@
 
             <!--  Пол  -->
             <StackPanel Grid.Row="6">
-                <TextBlock Margin="0,0,0,5" Text="Пол" FontSize="16" />
+                <TextBlock
+                    Margin="0,0,0,5"
+                    FontSize="16"
+                    Text="Пол" />
                 <ComboBox x:Name="ComboBoxGender" Height="30">
                     <ComboBoxItem Content="Мужской" />
                     <ComboBoxItem Content="Женский" />

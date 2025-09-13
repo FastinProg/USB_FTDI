@@ -85,10 +85,7 @@
                     Width="150"
                     Background="#FFEEF4FF"
                     Orientation="Vertical">
-                    <Button
-                        x:Name="ButtonMain"
-                        Click="ButtonChoiseForm_Click"
-                        Content="Меню" />
+
                     <Button x:Name="ButtonNewTwin" Click="ButtonChoiseForm_Click">
                         <TextBlock
                             Text="Создание нового двойника"

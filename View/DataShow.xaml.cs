@@ -51,7 +51,7 @@ namespace USB_FTDI.View
     {
         public ScottPlot.WPF.WpfPlot[] WpfPlotArr = new ScottPlot.WPF.WpfPlot[4];
         private UInt32 maxChaneelQuantity = 64;
-        private UInt32 currentChaneelQuantity = 16;
+        private UInt32 currentChaneelQuantity = 64;
         private UInt32 numberOfColumn = 4;
         private UInt32 numberOfRows = 16;
         public double[][] input_data = new double[64][];
@@ -217,7 +217,7 @@ namespace USB_FTDI.View
                                 for (UInt32 i = 0; i < this.currentChaneelQuantity; i++)
                                 {
                                     offset = i % this.numberOfRows;
-                                    input_data[i][indexData] = (Convert.ToDouble(array[i])/15) + (offset * y_space);
+                                    input_data[i][indexData] = (Convert.ToDouble(array[i])/50) + (offset * y_space);
                                 }
 
                                 if (indexData < data1.Length)
@@ -228,6 +228,7 @@ namespace USB_FTDI.View
                             }
                             catch
                             {
+                                break;
                             }
                         }
                         for (UInt32 col = 0; col < this.numberOfColumn; col++)
