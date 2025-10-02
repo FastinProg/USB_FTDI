@@ -97,6 +97,9 @@
     <Compile Include="View\DataShow.xaml.cs">
       <DependentUpon>DataShow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\DonwloadTwin.xaml.cs">
+      <DependentUpon>DonwloadTwin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\NewTwin.xaml.cs">
       <DependentUpon>NewTwin.xaml</DependentUpon>
     </Compile>
@@ -126,6 +129,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="View\DataShow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\DonwloadTwin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

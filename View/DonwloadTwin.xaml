@@ -1,16 +1,16 @@
 ﻿<Window
-    x:Class="USB_FTDI.View.WindowTwin"
+    x:Class="USB_FTDI.View.DonwloadTwin"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:USB_FTDI.View"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     Title="ССНЭКД"
-    Width="800"
-    Height="450"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
     mc:Ignorable="d">
     <Window.Resources>
-        <Style TargetType="Button" x:Key="MenuButtonStyle">
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#4A90E2" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontWeight" Value="Normal" />
@@ -26,28 +26,28 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
-            x:Name="border"
-            Background="{TemplateBinding Background}"
-            BorderBrush="{TemplateBinding BorderBrush}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            CornerRadius="8">
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                         <ControlTemplate.Triggers>
-                            <!-- Наведение -->
+                            <!--  Наведение  -->
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#357ABD" />
                             </Trigger>
-                            <!-- Нажатие -->
+                            <!--  Нажатие  -->
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#2C5F9C" />
                             </Trigger>
-                            <!-- Кнопка выбрана -->
+                            <!--  Кнопка выбрана  -->
                             <Trigger Property="Tag" Value="Selected">
                                 <Setter TargetName="border" Property="Background" Value="#f52bff" />
                                 <Setter Property="FontWeight" Value="Bold" />
                             </Trigger>
-                            <!-- Отключена -->
+                            <!--  Отключена  -->
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="border" Property="Background" Value="Gray" />
                             </Trigger>
@@ -81,15 +81,19 @@
             Background="#FFEEF4FF"
             Orientation="Vertical">
             <Button
-                Style="{StaticResource MenuButtonStyle}"
+                x:Name="ButtonNewTwin"
                 Click="ButtonNewTwin_Click"
-                x:Name="ButtonNewTwin"> 
+                Style="{StaticResource MenuButtonStyle}">
                 <TextBlock
                     Text="Создать анкету пациента"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
-            <Button x:Name="ButtonDonload" Cursor="Hand" Style="{StaticResource MenuButtonStyle}">
+            <Button
+                x:Name="ButtonDonload"
+                Click="ButtonNewTwin_Click"
+                Cursor="Hand"
+                Style="{StaticResource MenuButtonStyle}">
                 <TextBlock
                     Text="Загрузить двойника"
                     TextAlignment="Center"
@@ -97,17 +101,22 @@
             </Button>
             <Button x:Name="ButtonSee" Style="{StaticResource MenuButtonStyle}">
                 <TextBlock
+                    Cursor=""
                     Text="Просмотр двойника"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
             </Button>
             <Button x:Name="Start_reg" Style="{StaticResource MenuButtonStyle}">
                 <TextBlock
+                    Cursor=""
                     Text="Начать регистрацию"
                     TextAlignment="Center"
                     TextWrapping="Wrap" />
-            </Button>            
-            <Button x:Name="Back" Style="{StaticResource MenuButtonStyle}" Cursor="Hand">
+            </Button>
+            <Button
+                x:Name="Back"
+                Cursor="Hand"
+                Style="{StaticResource MenuButtonStyle}">
                 <TextBlock
                     Text="Назад"
                     TextAlignment="Center"
@@ -174,7 +183,7 @@
                         x:Name="TextBoxAge"
                         Width="50"
                         Height="30"
-                        Text="30" />
+                        Text="" />
 
                 </StackPanel>
             </StackPanel>
@@ -189,17 +198,18 @@
                     <ComboBoxItem Content="Мужской" />
                     <ComboBoxItem Content="Женский" />
                 </ComboBox>
-                <DatePicker FontSize="16" Margin="0,10,0,0"/>
+                <DatePicker Margin="0,10,0,0" FontSize="16" />
             </StackPanel>
 
             <!--  Кнопка Создать  -->
             <Button
-                Style="{StaticResource MenuButtonStyle}"
                 Grid.Row="8"
                 Width="100"
                 Height="35"
                 HorizontalAlignment="Left"
-                Content="Создать" />
+                Click="Button_Click"
+                Content="Выбрать"
+                Style="{StaticResource MenuButtonStyle}" />
 
         </Grid>
     </Grid>

@@ -6,14 +6,14 @@
     xmlns:local="clr-namespace:USB_FTDI"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Name="UserWindow"
-    Title="USBFTDI"
+    Title="ССНЭКД"
     MinWidth="800"
     MinHeight="600"
     WindowState="Maximized"
     mc:Ignorable="d">
 
     <Window.Resources>
-        <Style TargetType="Button" x:Key="MenuButtonStyle">
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#4A90E2" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontWeight" Value="Normal" />
@@ -29,28 +29,28 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border
-                    x:Name="border"
-                    Background="{TemplateBinding Background}"
-                    BorderBrush="{TemplateBinding BorderBrush}"
-                    BorderThickness="{TemplateBinding BorderThickness}"
-                    CornerRadius="8">
+                            x:Name="border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="8">
                             <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Border>
                         <ControlTemplate.Triggers>
-                            <!-- Наведение -->
+                            <!--  Наведение  -->
                             <Trigger Property="IsMouseOver" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#357ABD" />
                             </Trigger>
-                            <!-- Нажатие -->
+                            <!--  Нажатие  -->
                             <Trigger Property="IsPressed" Value="True">
                                 <Setter TargetName="border" Property="Background" Value="#2C5F9C" />
                             </Trigger>
-                            <!-- Кнопка выбрана -->
+                            <!--  Кнопка выбрана  -->
                             <Trigger Property="Tag" Value="Selected">
                                 <Setter TargetName="border" Property="Background" Value="#f52bff" />
                                 <Setter Property="FontWeight" Value="Bold" />
                             </Trigger>
-                            <!-- Отключена -->
+                            <!--  Отключена  -->
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter TargetName="border" Property="Background" Value="Gray" />
                             </Trigger>
@@ -93,32 +93,51 @@
                     Grid.Column="0"
                     Width="150"
                     Background="#FFEEF4FF"
-                    Orientation="Vertical" Cursor="">
+                    Cursor=""
+                    Orientation="Vertical">
 
-                    <Button x:Name="ButtonNewTwin" Click="ButtonChoiseForm_Click" Style="{StaticResource MenuButtonStyle}">
+                    <Button
+                        x:Name="ButtonNewTwin"
+                        Click="ButtonChoiseForm_Click"
+                        Style="{StaticResource MenuButtonStyle}">
                         <TextBlock
-                            Text="Создание новго двойника"
+                            Text="Создать анкету пациента"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Button>
 
 
-                    <Button x:Name="ButtonDonload" Click="ButtonChoiseForm_Click" Style="{StaticResource MenuButtonStyle}">
+                    <Button
+                        x:Name="ButtonDonload"
+                        Click="ButtonChoiseForm_Click"
+                        Style="{StaticResource MenuButtonStyle}">
                         <TextBlock
                             Text="Загрузить двойника"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Button>
-                    <Button x:Name="ButtonSee" Click="ButtonChoiseForm_Click" Style="{StaticResource MenuButtonStyle}">
+                    <Button
+                        x:Name="ButtonSee"
+                        Click="ButtonChoiseForm_Click"
+                        Style="{StaticResource MenuButtonStyle}">
                         <TextBlock
                             Text="Просмотр двойника"
                             TextAlignment="Center"
                             TextWrapping="Wrap" />
                     </Button>
                     <Button
-                        Style="{StaticResource MenuButtonStyle}"
+                        x:Name="Start_reg"
+                        Click="ButtonChoiseForm_Click"
+                        Style="{StaticResource MenuButtonStyle}">
+                        <TextBlock
+                            Text="Начать регистрацию"
+                            TextAlignment="Center"
+                            TextWrapping="Wrap" />
+                    </Button>
+                    <Button
                         x:Name="ButtonTermianl"
                         Click="ButtonChoiseForm_Click"
+                        Style="{StaticResource MenuButtonStyle}"
                         Visibility="Hidden">
                         <TextBlock
                             Text="Терминал"
@@ -126,10 +145,10 @@
                             TextWrapping="Wrap" />
                     </Button>
                     <Button
-                        Style="{StaticResource MenuButtonStyle}"
                         x:Name="ButtonParsing"
                         Click="ButtonChoiseForm_Click"
                         Cursor="Hand"
+                        Style="{StaticResource MenuButtonStyle}"
                         Visibility="Visible">
                         <TextBlock
                             Text="Визуализация"
@@ -158,23 +177,23 @@
                         <TextBlock
                             Margin="0,0,0,15"
                             FontSize="14"
-                            Text="Карточка пациента (по умолчанию)" />
+                            Text="" />
                         <TextBlock
                             Margin="0,0,0,5"
                             FontSize="16"
                             FontWeight="SemiBold"
-                            Text="Бодин Андрей Юрьевич" />
+                            Text="Пациент не выбран" />
                         <TextBlock>
-                            <Run Text="Возраст: " />
-                            <Run Text="27" />
+                            <Run Text="" />
+                            <Run Text="" />
                         </TextBlock>
                         <TextBlock>
-                            <Run Text="Пол: " />
-                            <Run Text="Мужской" />
+                            <Run Text="" />
+                            <Run Text="" />
                         </TextBlock>
                         <TextBlock>
-                            <Run Text="Дата создания: " />
-                            <Run Text="01.09.2025" />
+                            <Run Text="" />
+                            <Run Text="" />
                         </TextBlock>
                     </StackPanel>
                 </Border>

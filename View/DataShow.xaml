@@ -1,52 +1,102 @@
-﻿<UserControl x:Class="USB_FTDI.View.DataShow"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
-             xmlns:local="clr-namespace:USB_FTDI.View"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800"
-             >
+﻿<UserControl
+    x:Class="USB_FTDI.View.DataShow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:USB_FTDI.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="750"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
 
     <UserControl.Resources>
-        <!-- Стиль для переключателя -->
+        <!--  Стиль для переключателя  -->
+        <Style TargetType="Button" x:Key="MenuButtonStyle">
+            <Setter Property="Background" Value="#4A90E2" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Height" Value="50" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="BorderBrush" Value="#357ABD" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border
+    x:Name="border"
+    Background="{TemplateBinding Background}"
+    BorderBrush="{TemplateBinding BorderBrush}"
+    BorderThickness="{TemplateBinding BorderThickness}"
+    CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <!-- Наведение -->
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#357ABD" />
+                            </Trigger>
+                            <!-- Нажатие -->
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#2C5F9C" />
+                            </Trigger>
+                            <!-- Кнопка выбрана -->
+                            <Trigger Property="Tag" Value="Selected">
+                                <Setter TargetName="border" Property="Background" Value="#f52bff" />
+                                <Setter Property="FontWeight" Value="Bold" />
+                            </Trigger>
+                            <!-- Отключена -->
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="border" Property="Background" Value="Gray" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         <Style x:Key="SwitchStyle" TargetType="ToggleButton">
-            <Setter Property="Width" Value="40"/>
-            <Setter Property="Height" Value="20"/>
+            <Setter Property="Width" Value="40" />
+            <Setter Property="Height" Value="20" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ToggleButton">
                         <Grid>
-                            <!-- Задний фон -->
-                            <Border x:Name="SwitchBorder"
-                                    CornerRadius="10"
-                                    Background="LightGray"
-                                    BorderBrush="DarkGray"
-                                    BorderThickness="1"/>
-                            <!-- Бегунок -->
-                            <Ellipse x:Name="SwitchThumb"
-                                     Fill="White"
-                                     Width="18" Height="18"
-                                     Margin="1"
-                                     HorizontalAlignment="Left"
-                                     VerticalAlignment="Center"
-                                     RenderTransformOrigin="0.5,0.5"/>
+                            <!--  Задний фон  -->
+                            <Border
+                                x:Name="SwitchBorder"
+                                Background="LightGray"
+                                BorderBrush="DarkGray"
+                                BorderThickness="1"
+                                CornerRadius="10" />
+                            <!--  Бегунок  -->
+                            <Ellipse
+                                x:Name="SwitchThumb"
+                                Width="18"
+                                Height="18"
+                                Margin="1"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Center"
+                                Fill="White"
+                                RenderTransformOrigin="0.5,0.5" />
                         </Grid>
                         <ControlTemplate.Triggers>
-                            <!-- Активное состояние -->
+                            <!--  Активное состояние  -->
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="SwitchBorder" Property="Background" Value="#003366"/>
-                                <Setter TargetName="SwitchThumb" Property="HorizontalAlignment" Value="Right"/>
+                                <Setter TargetName="SwitchBorder" Property="Background" Value="#003366" />
+                                <Setter TargetName="SwitchThumb" Property="HorizontalAlignment" Value="Right" />
                             </Trigger>
-                            <!-- Наведение мыши -->
+                            <!--  Наведение мыши  -->
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="SwitchBorder" Property="BorderBrush" Value="Black"/>
+                                <Setter TargetName="SwitchBorder" Property="BorderBrush" Value="Black" />
                             </Trigger>
-                            <!-- Отключенный -->
+                            <!--  Отключенный  -->
                             <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="SwitchBorder" Property="Background" Value="#E0E0E0"/>
-                                <Setter TargetName="SwitchThumb" Property="Fill" Value="#B0B0B0"/>
+                                <Setter TargetName="SwitchBorder" Property="Background" Value="#E0E0E0" />
+                                <Setter TargetName="SwitchThumb" Property="Fill" Value="#B0B0B0" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -54,27 +104,31 @@
             </Setter>
         </Style>
 
-        
+
 
     </UserControl.Resources>
 
     <Grid x:Name="MainGrid" Background="White">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="20"/>
-            <ColumnDefinition Width="150"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" Grid.Row="0"/>
-        <StackPanel Grid.Column="0" Grid.Row="1"/>
-        <StackPanel Grid.Column="1" Grid.Row="0"/>
-        <UniformGrid x:Name="Parents" Columns="4" Grid.Column="2" Grid.Row="1" >
-            <ScottPlot:WpfPlot x:Name="MyPlot1"  Background="Yellow"/>
+        <StackPanel Grid.Row="0" Grid.Column="0" />
+        <StackPanel Grid.Row="1" Grid.Column="0" />
+        <StackPanel Grid.Row="0" Grid.Column="1" />
+        <UniformGrid
+            x:Name="Parents"
+            Grid.Row="1"
+            Grid.Column="2"
+            Columns="4">
+            <ScottPlot:WpfPlot x:Name="MyPlot1" Background="Yellow" />
             <ScottPlot:WpfPlot x:Name="MyPlot2" />
             <ScottPlot:WpfPlot x:Name="MyPlot3" />
             <ScottPlot:WpfPlot x:Name="MyPlot4" />
@@ -82,42 +136,95 @@
 
         <!--<Grid Grid.Column="3" Grid.Row="1">
             <StackPanel Orientation="Vertical">
-                
+
             </StackPanel>
         </Grid>-->
         <Grid Grid.Row="1" Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
 
-            <!-- Фильтры -->
-            <Border Grid.Row="0" CornerRadius="8" BorderThickness="1" BorderBrush="#DDD" Padding="10" Margin="10">
+            <!--  Фильтры  -->
+            <Border
+                Grid.Row="0"
+                Margin="10"
+                Padding="10"
+                BorderBrush="#DDD"
+                BorderThickness="1"
+                CornerRadius="8">
                 <StackPanel>
                     <StackPanel.Background>
-                        <SolidColorBrush Color="MintCream"/>
+                        <SolidColorBrush Color="MintCream" />
                     </StackPanel.Background>
 
-                    <TextBlock FontSize="16" Text="Фильтрация" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,20"/>
+                    <TextBlock
+                        Margin="0,0,0,20"
+                        FontSize="16"
+                        FontWeight="Bold"
+                        Text="Фильтрация"
+                        TextAlignment="Center" />
 
-                    <TextBlock FontSize="16" Text="ВЧ фильтр" Margin="0,0,10,0"/>
-                    <ToggleButton Style="{StaticResource SwitchStyle}"/>
+                    <TextBlock
+                        Margin="0,0,10,0"
+                        FontSize="16"
+                        Text="ВЧ фильтр" />
+                    <ToggleButton Style="{StaticResource SwitchStyle}" />
 
-                    <TextBlock FontSize="16" Text="Режектор 50 Гц" Margin="0,10,10,0"/>
-                    <ToggleButton Style="{StaticResource SwitchStyle}" IsChecked="True"/>
+                    <TextBlock
+                        Margin="0,10,10,0"
+                        FontSize="16"
+                        Text="Режектор 50 Гц" />
+                    <ToggleButton IsChecked="True" Style="{StaticResource SwitchStyle}" />
 
-                    <TextBlock FontSize="16" Text="НЧ фильтр" Margin="0,10,10,0"/>
-                    <ToggleButton Style="{StaticResource SwitchStyle}" IsEnabled="False"/>
+                    <TextBlock
+                        Margin="0,10,10,0"
+                        FontSize="16"
+                        Text="НЧ фильтр" />
+                    <ToggleButton IsEnabled="False" Style="{StaticResource SwitchStyle}" />
                 </StackPanel>
             </Border>
 
-            <!-- Кнопки -->
-            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="10">
-                <Image Source="../image/2.jpg" Width="100" Height="100"/>
-                <Button x:Name="OpenFile" Height="40" Content="Открыть" Margin="0,10,0,0" Click="OpenFile_Click"/>
-                <Button Height="40" Content="Прикрепить" Margin="0,10,0,0" />
-                <Button Height="40" Content="Визуализация" Margin="0,10,0,0" />
-                <Button x:Name="Back" Height="40" Content="Назад" Margin="0,10,0,0"/>
+            <!--  Кнопки  -->
+            <StackPanel
+                Grid.Row="1"
+                Margin="10"
+                Orientation="Vertical">
+                <Image
+                    Width="100"
+                    Height="100"
+                    Source="../image/2.jpg" />
+                <Button
+                    Style="{StaticResource MenuButtonStyle}"
+                    x:Name="OpenFile"
+                    Height="40"
+                    Margin="0,10,0,0"
+                    Click="OpenFile_Click"
+                    Content="Загрузить" />
+                <Button x:Name="ButtonSee" 
+                     Style="{StaticResource MenuButtonStyle}" Margin="0,10,0,0" >
+                    <TextBlock
+                    Text="Начать регистрацию"
+                    TextAlignment="Center"
+                    TextWrapping="Wrap" Cursor="" />
+                </Button>
+
+                <Button
+                    Style="{StaticResource MenuButtonStyle}"
+                    Height="40"
+                    Margin="0,10,0,0"
+                    Content="Обновить ЦД" />
+                <Button
+                    Style="{StaticResource MenuButtonStyle}"
+                    Height="40"
+                    Margin="0,10,0,0"
+                    Content="Визуализация" />
+                <Button
+                    Style="{StaticResource MenuButtonStyle}"
+                    x:Name="Back"
+                    Height="40"
+                    Margin="0,10,0,0"
+                    Content="Назад" />
             </StackPanel>
         </Grid>
 

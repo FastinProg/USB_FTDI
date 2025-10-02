@@ -55,6 +55,10 @@ namespace USB_FTDI
                     var Twin = new WindowTwin();
                     Twin.Show();
                     return;
+                case "ButtonDonload":
+                    var Download = new DonwloadTwin();
+                    Download.Show();
+                    return;
                 case "ButtonSee":
                     var Visualization = new WindowVisualization();
                     Visualization.Show();
